@@ -11,6 +11,23 @@
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/app.css">
         <link href="https://fonts.googleapis.com/css?family=Coustard|Lora|UnifrakturMaguntia" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style type="text/css">
+            body {
+                margin: 0;
+                padding: 0.4em 1em 6em;
+                background: #fff;
+            }
+            .yue {
+                max-width: 650px;
+                margin: 0 auto;
+            }
+            header {
+                text-align: center;
+            }
+            img {
+                align: middle;
+            }
+        </style>
 
         {% if BROWSER_COLOR %}
             <!-- Chrome, Firefox OS and Opera -->
@@ -73,34 +90,25 @@
 </head>
 
 <body>
-    <main class="wrapper">
-        <section class="container">
-            <header class='column'>
-                <h1 class='title'><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+    <main class="yue">
+        <section style="text-align: center;">
+            <header>
+                <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
             </header>
 
-            <div class="row navbar">
+            <div>
                 {% for cat, null in categories %}
-                  <div class="column nav-item {% if cat == category %}is-active{% endif %}"><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></div>
+                  <span><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></span> 
                 {% endfor %}
                 {% for p in pages %}
-                    <div class="column nav-item {% if p == page %}is-active{% endif %}"><a href="{{ SITEURL }}/pages/{{ p.url }}">{{ p.title }}</a></div>
+                    <div><a href="{{ SITEURL }}/pages/{{ p.url }}">{{ p.title }}</a></div>
                 {% endfor %}
-                <div class="column nav-item"><a href="/archives">Archives</a></div>
+                <div><a href="/archives">Archives</a></div>
             </div>
         </section>
 
         {% block content %}
         {% endblock %}
-
-        <section class="container footer">
-            <footer>
-                <address>
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.
-                </address>
-            </footer>
-        </section>
     </main>
 
     {% block additional_js %}{% endblock %}

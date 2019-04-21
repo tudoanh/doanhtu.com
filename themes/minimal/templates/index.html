@@ -5,23 +5,24 @@
 {% endblock title %}
 
 {% block content %}
-    <section class='container'>
+    <hr>
+    <section>
     {% block content_title %}
     {% endblock %}
     </section>
     
-    <section class="container">
+    <section>
     {% for article in articles_page.object_list %}
         <article>
             <header>
-                <h2 class='entry-title'><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+                <h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
             </header>
 
-            <footer class='center'>
-                <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.date|strftime('%d/%m/%Y') }} </time>
-                <address class="vcard author">By
+            <footer>
+                <time datetime="{{ article.date.isoformat() }}"> {{ article.date|strftime('%d/%m/%Y') }} </time>
+                <address>By
                 {% for author in article.authors %}
-                    <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                    <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
                 {% endfor %} in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
                 </address>
                 {% if article.tags %}
@@ -33,7 +34,7 @@
             </footer>
 
             <br>
-            <div class="entry-content"> {{ article.summary }} </div>
+            <div> {{ article.summary }} </div>
         </article>
         <hr>
     {% endfor %}
