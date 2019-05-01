@@ -20,10 +20,7 @@
 
             <footer>
                 <time datetime="{{ article.date.isoformat() }}"> {{ article.date|strftime('%d/%m/%Y') }} </time>
-                <address>By
-                {% for author in article.authors %}
-                    <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-                {% endfor %} in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+                <address>In <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
                 </address>
                 {% if article.tags %}
                     <em>Tags</em>:
