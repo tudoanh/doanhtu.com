@@ -13,6 +13,16 @@ DISQUS_SITENAME = 'doanhtu-science'
 HOME_HIDE_TAGS = False
 OUTPUT_PATH = 'public/'
 STATIC_PATHS = ['css', 'images']
+RELATIVE_URLS = True
+MARKDOWN = {
+	'extensions': ['fenced_code'],
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
+}
 
 THEME = 'themes/minimal'
 

@@ -6,3 +6,4 @@ milligram-1.3.0/
 .ropeproject/
 .DS_STORE
 credentials.csv
+venv/
