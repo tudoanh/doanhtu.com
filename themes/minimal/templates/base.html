@@ -1,119 +1,112 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
-        {% block head %}
-        <title>{% block title %}{{ SITENAME }}{% endblock title %} - {{ SITENAME }}</title>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="HandheldFriendly" content="True" />
-        <meta name="robots" content="{{ ROBOTS }}" />
-        <link rel="shortcut icon" type="image/png" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/icon.png"/>
-        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/app.css">
-        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css">
-        <link href="https://fonts.googleapis.com/css?family=Coustard|Lora|UnifrakturMaguntia" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <style type="text/css">
-            body {
-                margin: 0;
-                padding: 0.4em 1em 6em;
-                background: #fff;
-            }
-            .yue {
-                max-width: 650px;
-                margin: 0 auto;
-            }
-            header {
-                text-align: center;
-            }
-            img {
-                align: middle;
-            }
-        </style>
+  {% block head %}
+    <title>{% block title %}{{ SITENAME }}{% endblock title %} - {{ SITENAME }}</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="robots" content="{{ ROBOTS }}"/>
+    <link rel="shortcut icon" type="image/png" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/icon.png"/>
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/app.css">
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css">
+    <link href="https://fonts.googleapis.com/css?family=Coustard|Lora|UnifrakturMaguntia" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0.4em 1em 6em;
+        background: #fff;
+      }
 
-        {% if BROWSER_COLOR %}
-            <!-- Chrome, Firefox OS and Opera -->
-            <meta name="theme-color" content="{{ BROWSER_COLOR }}">
-            <!-- Windows Phone -->
-            <meta name="msapplication-navbutton-color" content="{{ BROWSER_COLOR }}">
-            <!-- iOS Safari -->
-            <meta name="apple-mobile-web-app-capable" content="yes">
-            <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        {% endif %}
+      .yue {
+        max-width: 650px;
+        margin: 0 auto;
+      }
 
-        {% block meta %}
-            <meta name="author" content="{{ AUTHOR }}" />
-            <meta name="description" content="{{ SITEDESCRIPTION }}" />
-        {% endblock %}
+      header {
+        text-align: center;
+      }
 
-        {% if GOOGLE_ADSENSE and GOOGLE_ADSENSE.page_level_ads %}
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({
-                google_ad_client: "{{ GOOGLE_ADSENSE.ca_id }}",
-                enable_page_level_ads: true
-                });
-            </script>
-        {% endif %}
+      img {
+        align: middle;
+      }
+    </style>
 
-        {% if FEED_ALL_ATOM %}
-        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
-        {% endif %}
+    {% block meta %}
+      <meta name="author" content="{{ AUTHOR }}"/>
+      <meta name="description" content="{{ SITEDESCRIPTION }}"/>
+    {% endblock %}
 
-        {% if FEED_ALL_RSS %}
-        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
-        {% endif %}
+    {% if FEED_ALL_ATOM %}
+      <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate"
+            title="{{ SITENAME }} Full Atom Feed"/>
+    {% endif %}
 
-        {% if FEED_ATOM %}
-        <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
-        {% endif %}
+    {% if FEED_ALL_RSS %}
+      <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate"
+            title="{{ SITENAME }} Full RSS Feed"/>
+    {% endif %}
 
-        {% if FEED_RSS %}
-        <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
-        {% endif %}
+    {% if FEED_ATOM %}
+      <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate"
+            title="{{ SITENAME }} Atom Feed"/>
+    {% endif %}
 
-        {% if CATEGORY_FEED_ATOM and category %}
-        <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
-        {% endif %}
+    {% if FEED_RSS %}
+      <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate"
+            title="{{ SITENAME }} RSS Feed"/>
+    {% endif %}
 
-        {% if CATEGORY_FEED_RSS and category %}
-        <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
-        {% endif %}
+    {% if CATEGORY_FEED_ATOM and category %}
+      <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml"
+            rel="alternate" title="{{ SITENAME }} Categories Atom Feed"/>
+    {% endif %}
 
-        {% if TAG_FEED_ATOM and tag %}
-        <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
-        {% endif %}
+    {% if CATEGORY_FEED_RSS and category %}
+      <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml"
+            rel="alternate" title="{{ SITENAME }} Categories RSS Feed"/>
+    {% endif %}
 
-        {% if TAG_FEED_RSS and tag %}
-        <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
-        {% endif %}
+    {% if TAG_FEED_ATOM and tag %}
+      <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate"
+            title="{{ SITENAME }} Tags Atom Feed"/>
+    {% endif %}
 
-        {% endblock head %}
+    {% if TAG_FEED_RSS and tag %}
+      <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate"
+            title="{{ SITENAME }} Tags RSS Feed"/>
+    {% endif %}
+
+  {% endblock head %}
 </head>
 
 <body>
-    <main class="yue">
-        <section style="text-align: center;">
-            <header>
-                <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
-            </header>
+<main class="yue">
+  <section style="text-align: center;">
+    <header>
+      <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+    </header>
 
-            <div>
-                {% for cat, null in categories %}
-                  <span><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></span> 
-                {% endfor %}
-                {% for p in pages %}
-                    <div><a href="{{ SITEURL }}/pages/{{ p.url }}">{{ p.title }}</a></div>
-                {% endfor %}
-                <div><a href="/archives">Archives</a></div>
-            </div>
-        </section>
+    <div>
+      {% for cat, null in categories %}
+        <span><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></span>
+      {% endfor %}
+      {% for p in pages %}
+        <div><a href="{{ SITEURL }}/pages/{{ p.url }}">{{ p.title }}</a></div>
+      {% endfor %}
+      <div><a href="/archives">Archives</a></div>
+    </div>
+  </section>
 
-        {% block content %}
-        {% endblock %}
-    </main>
+  {% block content %}
+  {% endblock %}
+</main>
 
-    {% block additional_js %}{% endblock %}
-    {% include 'analytics.html' %}
-    <script src="//instant.page/5.0.1" type="module" integrity="sha384-0DvoZ9kNcB36fWcQApIMIGQoTzoBDYTQ85e8nmsfFOGz4RHAdUhADqJt4k3K2uLS"></script>
+{% block additional_js %}{% endblock %}
+<noscript><img src="http://analytic.doanhtu.com/ingress/1a500c98-f488-4212-aa98-9ba4990068a6/pixel.gif"></noscript>
+<script src="http://analytic.doanhtu.com/ingress/1a500c98-f488-4212-aa98-9ba4990068a6/script.js"></script>
+<script src="//instant.page/5.0.1" type="module"
+        integrity="sha384-0DvoZ9kNcB36fWcQApIMIGQoTzoBDYTQ85e8nmsfFOGz4RHAdUhADqJt4k3K2uLS"></script>
 </body>
 </html>

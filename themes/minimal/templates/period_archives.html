@@ -1,25 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
-<section>
+  <section>
     <h1>Archives for {{ period | reverse | join(' ') }}</h1>
 
     <table>
-    <thead>
+      <thead>
+      <tr>
+        <th>Published</th>
+        <th>Article</th>
+        <th>Category</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for article in dates %}
         <tr>
-            <th>Published</th>
-            <th>Article</th>
-            <th>Category</th>
+          <td>{{ article.date|strftime('%d/%m/%Y') }}</td>
+          <td><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
+          <td><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></td>
         </tr>
-    </thead>
-    <tbody>
-        {% for article in dates %}
-        <tr>
-            <td>{{ article.date|strftime('%d/%m/%Y') }}</td>
-            <td><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
-            <td><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
-</section>
+      {% endfor %}
+      </tbody>
+    </table>
+  </section>
 {% endblock %}
