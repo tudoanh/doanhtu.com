@@ -9,10 +9,10 @@ SITEURL = 'https://doanhtu.com'
 DISPLAY_CATEGORIES_ON_MENU = True
 DISPLAY_PAGES_ON_MENU = True
 SUMMARY_MAX_LENGTH = 200
-DISQUS_SITENAME = 'doanhtu-science'
+
 HOME_HIDE_TAGS = False
 OUTPUT_PATH = 'public/'
-STATIC_PATHS = ['css', 'images']
+STATIC_PATHS = ['css', 'images', 'js']
 RELATIVE_URLS = True
 MARKDOWN = {
 	'extensions': ['fenced_code'],
@@ -70,15 +70,3 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
-
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
-
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
