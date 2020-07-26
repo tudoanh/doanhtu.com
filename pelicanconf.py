@@ -12,7 +12,7 @@ SUMMARY_MAX_LENGTH = 200
 
 HOME_HIDE_TAGS = False
 OUTPUT_PATH = 'public/'
-STATIC_PATHS = ['css', 'images', 'js']
+STATIC_PATHS = ['static/css', 'static/images', 'static/js']
 RELATIVE_URLS = True
 MARKDOWN = {
 	'extensions': ['fenced_code'],
@@ -59,7 +59,7 @@ MONTH_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/{date:%m}/index.html'
 
 PATH = 'content'
 
-TIMEZONE = 'Asia/Saigon'
+TIMEZONE = 'Asia/Ho_Chi_Minh'
 
 DEFAULT_LANG = 'en'
 

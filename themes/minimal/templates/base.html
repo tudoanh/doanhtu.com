@@ -90,7 +90,7 @@
 
     <div>
       {% for cat, null in categories %}
-        <span><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></span>
+        <span><a href="{{ SITEURL }}/{{ cat.url }}"><strong>/{{ cat }}</strong></a></span>
       {% endfor %}
       {% for p in pages %}
         <div><a href="{{ SITEURL }}/pages/{{ p.url }}">{{ p.title }}</a></div>

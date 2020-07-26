@@ -18,31 +18,31 @@ Tìm hiểu mấy hôm, rất là cực nên hôm nay mình viết lại bài n�
 
 * Một module **Sim900A**
 
-![](https://cdn-images-1.medium.com/max/2000/0*LxUDdh-_XLIsLOBK.jpg)
+![]({static}/static/images/sms_900a.jpg)
 
 * Dây chuyển đổi USB — UART PL2303 (Có thể không có)
 
-![](https://cdn-images-1.medium.com/max/2000/0*st-uEN7bd7TxFn71.jpg)
+![]({static}/static/images/PL2303.jpg)
 
 * Đầy đủ dây nối
 
-![](https://cdn-images-1.medium.com/max/2000/0*cT6jvUUCv8BtdxU_.png)
+![]({static}/static/images/gpio_string.jpeg)
 
 ## Kết nối
 
 Chỉ cần bạn kết nối đúng các cổng *Tx, Rx, Gnd và nguồn 5v* vào Pi là xong. Tham khảo ảnh dưới:
 
-![](https://cdn-images-1.medium.com/max/2624/0*GvDvS1wwLMTTRWxw.jpg)
+![]({static}/static/images/gpio_map.jpeg)
 
 Ảnh thực tế (Nếu kết nối thẳng vào GPIO)
 
-![](https://cdn-images-1.medium.com/max/4000/0*7uycXUwOUcUbFH0G.jpg)
+![]({static}/static/images/rasp_sms_1.jpg)
 
-![](https://cdn-images-1.medium.com/max/4000/0*5SWGHh30pdJ-TRrU.jpg)
+![]({static}/static/images/rasp_sms_2.jpg)
 
 Còn nếu kết nối qua USB
 
-![](https://cdn-images-1.medium.com/max/4000/0*iTHkYv8Rh2TXgm2_.jpg)
+![]({static}/static/images/rasp_sms_3.jpg)
 
 ## Cài đặt
 
@@ -50,7 +50,7 @@ Còn nếu kết nối qua USB
 
 Bạn có thể dùng “raspi-config” để mở UART:
 
-![](https://cdn-images-1.medium.com/max/3844/0*pPgk8OHCZe9Byhp5.png)
+![]({static}/static/images/rasp_config.jpg)
 
 1. Trong “Interfacing Options”, chọn “Serial”
 
@@ -66,7 +66,7 @@ Và bạn có thể bật *terminal* lên và test xem kết nối thành công 
 
 Ví dụ:
 
-![](https://cdn-images-1.medium.com/max/2692/0*ARNoeoY37ScXpBsi.png)
+![]({static}/static/images/read_sms.png)
 
 Link asciinema:
 
@@ -78,7 +78,7 @@ Sử dụng thư viện sau để kết nối và làm việc với SMS Module:
 
 Ví dụ về kết quả nhận được bằng lệnh **AT+CNMI=3,2,0,0,0**
 
-![](https://cdn-images-1.medium.com/max/4000/0*u1dVWPTqYw-QhEwz.png)
+![]({static}/static/images/read_sms_2.png)
 
 Về chi tiết cách sử dụng các lệnh AT và các khái niệm GPIO, UART mình sẽ để sang một bài khác.
 
