@@ -32,7 +32,7 @@ Tìm hiểu mấy hôm, rất là cực nên hôm nay mình viết lại bài n�
 
 Chỉ cần bạn kết nối đúng các cổng *Tx, Rx, Gnd và nguồn 5v* vào Pi là xong. Tham khảo ảnh dưới:
 
-![]({static}/static/images/gpio_map.jpeg)
+![]({static}/static/images/gpio_map.jpg)
 
 Ảnh thực tế (Nếu kết nối thẳng vào GPIO)
 
