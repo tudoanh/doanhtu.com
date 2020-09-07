@@ -13,7 +13,7 @@ https://en.wikipedia.org/wiki/Sequence
 - Sequence is like list
 - Often write like this: :math:`a_n, b_n, c_n`
 
-Example: :math:`\{(p_t, v_t)_{t=1,...,T}\}` where :math:`p_t` is the price associated with tick *t* and :math:`v_t` is the volume associated with tick *t*. The so-called tick rule defines a sequence :math:`\{b_t\}_(t=1,...,T)` where
+Example: :math:`\{(p_t, v_t)_{t=1,...,T}\}` where :math:`p_t` is the price associated with tick *t* and :math:`v_t` is the volume associated with tick *t*. The so-called tick rule defines a sequence :math:`\{b_t\}_{t=1,...,T}` where
 
 .. math::
 
