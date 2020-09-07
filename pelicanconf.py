@@ -26,6 +26,8 @@ MARKDOWN = {
 
 THEME = 'themes/minimal'
 
+PLUGINS = ["pelican_katex", ]
+
 DEFAULT_PAGINATION = 3
 PAGINATION_PATTERNS = (
     (1, '{base_name}/', '{base_name}/index.html'),
