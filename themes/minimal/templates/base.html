@@ -10,10 +10,7 @@
     <link rel="shortcut icon" type="image/png" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/icon.png"/>
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/app.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css">
-	<link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-      crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Coustard|Lora|UnifrakturMaguntia" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/katex.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style type="text/css">
       body {
@@ -92,6 +89,7 @@
 {% block additional_js %}{% endblock %}
 <noscript><img src="https://analytic.doanhtu.com/ingress/13a43b67-860c-452b-bfa9-88781df11d1e/pixel.gif"></noscript>
 <script src="https://analytic.doanhtu.com/ingress/13a43b67-860c-452b-bfa9-88781df11d1e/script.js"></script>
+<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/katex.min.js"></script>
 <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/instantpage.js" type="module"></script>
 </body>
 </html>
