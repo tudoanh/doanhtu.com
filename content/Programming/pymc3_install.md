@@ -11,3 +11,5 @@ Example:
 ```bash
 CONFIGURE_OPTS=--enable-shared pyenv install 3.8.5
 ```
+
+Source: https://stackoverflow.com/questions/21342931/error-importing-theano
