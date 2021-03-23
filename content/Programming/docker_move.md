@@ -1,6 +1,6 @@
 Title: Move docker data to another location (Ubuntu)
 Date: 18/03/21 20:12
-Tags: programming
+Tags: docker, install
 Authors: Do Anh Tu
 
 
