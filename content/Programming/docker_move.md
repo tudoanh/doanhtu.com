@@ -34,3 +34,5 @@ This should output new location
 7. Remove old data  
 
 8. Profit
+
+P/s: I'm using Docker version **20.10.6**, build 370c289
