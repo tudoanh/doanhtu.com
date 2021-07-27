@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
-  {% block head %}
-    <title>{% block title %}{{ SITENAME }}{% endblock title %} - {{ SITENAME }}</title>
+  {% block head %} <title>{% block title %}{{ SITENAME }}{% endblock title %} - {{ SITENAME }}</title>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="HandheldFriendly" content="True"/>
@@ -20,9 +19,7 @@
       }
 
       .yue {
-        max-width: 666px;
-        margin: 0 auto;
-      }
+        max-width: 666px; margin: 0 auto; }
 
       header {
         text-align: center;
@@ -90,5 +87,28 @@
 <noscript><img src="https://analytic.doanhtu.com/ingress/1a500c98-f488-4212-aa98-9ba4990068a6/pixel.gif"></noscript> <script defer src="https://analytic.doanhtu.com/ingress/1a500c98-f488-4212-aa98-9ba4990068a6/script.js"></script>
 <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/katex.min.js"></script>
 <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/instantpage.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+      const options = {
+        bottom: '64px', // default: '32px'
+        right: 'unset', // default: '32px'
+        left: '32px', // default: 'unset'
+        time: '0.5s', // default: '0.3s'
+        mixColor: '#fff', // default: '#fff'
+        backgroundColor: '#fff',  // default: '#fff'
+        buttonColorDark: '#100f2c',  // default: '#100f2c'
+        buttonColorLight: '#fff', // default: '#fff'
+        saveInCookies: false, // default: true,
+        label: '🌓', // default: ''
+        autoMatchOsTheme: true // default: true
+      }
+      const darkmode = new Darkmode(options);
+      darkmode.showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
 </body>
 </html>
