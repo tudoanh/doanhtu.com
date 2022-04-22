@@ -18,8 +18,8 @@ const annotations = {
     type: "circle",
     color: "#ffce55",
     multiline: true,
-    animate: false,
-    padding: 7,
+    animate: true,
+    padding: 6,
   },
   ".bracket": {
     type: "bracket",
@@ -34,6 +34,7 @@ const annotations = {
     color: "#8eecf5",
     multiline: true,
     animate: false,
+    iterations: 3,
   },
 };
 
