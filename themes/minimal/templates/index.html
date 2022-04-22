@@ -1,43 +1,53 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block title %} Home {% endblock title %} {% block
+content %}
+<hr />
+<section>{% block content_title %} {% endblock %}</section>
 
-{% block title %}
-  Home
-{% endblock title %}
+<section>
+  {% for article in articles_page.object_list %}
+  <article>
+    <header>
+      <h1>
+        <a
+          href="{{ SITEURL }}/{{ article.url }}"
+          rel="bookmark"
+          title="Permalink to {{ article.title|striptags }}"
+          >{{ article.title }}</a
+        >
+      </h1>
+    </header>
 
-{% block content %}
-  <hr>
-  <section>
-    {% block content_title %}
-    {% endblock %}
-  </section>
+    <footer>
+      <time datetime="{{ article.date.isoformat() }}">
+        {{ article.date|strftime('%d/%m/%Y') }}
+      </time>
+      <address>
+        In
+        <a href="{{ SITEURL }}/{{ article.category.url }}"
+          >{{ article.category }}</a
+        >
+      </address>
+      {% if article.tags %}
+      <em>Tags</em>: {% for tag in article.tags %}
+      <a href="{{ SITEURL }}/{{ tag.url }}"><em>{{ tag }}</em></a
+      >{% if not loop.last %},{% endif %} {% endfor %} {% endif %}
+    </footer>
 
-  <section>
-    {% for article in articles_page.object_list %}
-      <article>
-        <header>
-          <h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-                 title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
-        </header>
+    <br />
+    <div>{{ article.summary }}</div>
 
-        <footer>
-          <time datetime="{{ article.date.isoformat() }}"> {{ article.date|strftime('%d/%m/%Y') }} </time>
-          <address>In <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
-          </address>
-          {% if article.tags %}
-            <em>Tags</em>:
-            {% for tag in article.tags %}
-              <a href="{{ SITEURL }}/{{ tag.url }}"><em>{{ tag }}</em></a>{% if not loop.last %},{% endif %}
-            {% endfor %}
-          {% endif %}
-        </footer>
-
-        <br>
-        <div> {{ article.summary }} </div>
-      </article>
-      <hr>
-    {% endfor %}
-    {% if articles_page.has_other_pages() %}
-      {% include 'pagination.html' %}
-    {% endif %}
-  </section><!-- /#content -->
+    <div style="text-align: center">
+      <a
+        class="readmore"
+        style="text-decoration: none"
+        href="{{ SITEURL }}/{{ article.url }}"
+        >Read more</a
+      >
+    </div>
+  </article>
+  <hr />
+  {% endfor %} {% if articles_page.has_other_pages() %} {% include
+  'pagination.html' %} {% endif %}
+</section>
+<!-- /#content -->
 {% endblock content %}

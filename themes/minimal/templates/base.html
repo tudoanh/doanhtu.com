@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
-<head>
-  {% block head %} <title>{% block title %}{{ SITENAME }}{% endblock title %} - {{ SITENAME }}</title>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="HandheldFriendly" content="True"/>
-    <meta name="robots" content="{{ ROBOTS }}"/>
-    <link rel="shortcut icon" type="image/png" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/icon.png"/>
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/app.css">
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css">
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/katex.min.css">
-    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/hack-subset.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    {% block head %}
+    <title>
+      {% block title %}{{ SITENAME }}{% endblock title %} - {{ SITENAME }}
+    </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta
+      name="description"
+      content="{%block des %}My notes on the journey to understand Math, Programming, Statistics, Music and Life.{%endblock%}"
+    />
+    <meta property="og:image" content="https://www.mywebsite.com/image.jpg" />
+    <meta property="og:image:alt" content="Image description" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="{{ ROBOTS }}" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/icon.png"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/app.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/katex.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/hack-subset.css"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <style type="text/css">
       body {
@@ -21,8 +54,11 @@
       }
 
       .yue {
-        max-width: 666px; margin: 0 auto;
-        font-family: Hack, -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+        max-width: 666px;
+        margin: 0 auto;
+        font-family: Hack, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "Droid Sans", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB",
+          "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
       }
 
       header {
@@ -35,84 +71,104 @@
     </style>
 
     {% block meta %}
-      <meta name="author" content="{{ AUTHOR }}"/>
-      <meta name="description" content="{{ SITEDESCRIPTION }}"/>
-    {% endblock %}
+    <meta name="author" content="{{ AUTHOR }}" />
+    <meta name="description" content="{{ SITEDESCRIPTION }}" />
+    {% endblock %} {% if FEED_ALL_ATOM %}
+    <link
+      href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}"
+      type="application/atom+xml"
+      rel="alternate"
+      title="{{ SITENAME }} Full Atom Feed"
+    />
+    {% endif %} {% if FEED_ALL_RSS %}
+    <link
+      href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}"
+      type="application/rss+xml"
+      rel="alternate"
+      title="{{ SITENAME }} Full RSS Feed"
+    />
+    {% endif %} {% if FEED_ATOM %}
+    <link
+      href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}"
+      type="application/atom+xml"
+      rel="alternate"
+      title="{{ SITENAME }} Atom Feed"
+    />
+    {% endif %} {% if FEED_RSS %}
+    <link
+      href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}"
+      type="application/rss+xml"
+      rel="alternate"
+      title="{{ SITENAME }} RSS Feed"
+    />
+    {% endif %} {% endblock head %}
+  </head>
 
-    {% if FEED_ALL_ATOM %}
-      <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate"
-            title="{{ SITENAME }} Full Atom Feed"/>
-    {% endif %}
+  <body>
+    <main class="yue">
+      <section style="text-align: center">
+        <header>
+          <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+        </header>
 
-    {% if FEED_ALL_RSS %}
-      <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate"
-            title="{{ SITENAME }} Full RSS Feed"/>
-    {% endif %}
+        <div>
+          {# {% for cat, null in categories %}
+          <span
+            ><a href="{{ SITEURL }}/{{ cat.url }}"
+              ><strong>/{{ cat }}</strong></a
+            ></span
+          >
+          {% endfor %} #} {% for p in pages %}
+          <div><a href="{{ SITEURL }}/pages/{{ p.url }}">{{ p.title }}</a></div>
+          {% endfor %}
+          <div><a href="/archives">Archives</a></div>
+          <div><a href="/atom">Feed</a></div>
+        </div>
+      </section>
 
-    {% if FEED_ATOM %}
-      <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate"
-            title="{{ SITENAME }} Atom Feed"/>
-    {% endif %}
+      {% block content %} {% endblock %}
+    </main>
 
-    {% if FEED_RSS %}
-      <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate"
-            title="{{ SITENAME }} RSS Feed"/>
-    {% endif %}
+    {% block additional_js %}{% endblock %}
+    <noscript
+      ><img
+        src="https://analytic.doanhtu.com/ingress/1a500c98-f488-4212-aa98-9ba4990068a6/pixel.gif"
+    /></noscript>
+    <script
+      defer
+      src="https://analytic.doanhtu.com/ingress/1a500c98-f488-4212-aa98-9ba4990068a6/script.js"
+    ></script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/katex.min.js"></script>
+    <script
+      src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/instantpage.js"
+      type="module"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
-  {% endblock head %}
-</head>
-
-<body>
-<main class="yue">
-  <section style="text-align: center;">
-    <header>
-      <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
-    </header>
-
-    <div>
-      {#
-      {% for cat, null in categories %}
-        <span><a href="{{ SITEURL }}/{{ cat.url }}"><strong>/{{ cat }}</strong></a></span>
-      {% endfor %}
-      #}
-      {% for p in pages %}
-        <div><a href="{{ SITEURL }}/pages/{{ p.url }}">{{ p.title }}</a></div>
-      {% endfor %}
-      <div><a href="/archives">Archives</a></div>
-      <div><a href="/atom">Feed</a></div>
-    </div>
-  </section>
-
-  {% block content %}
-  {% endblock %}
-</main>
-
-{% block additional_js %}{% endblock %}
-<noscript><img src="https://analytic.doanhtu.com/ingress/1a500c98-f488-4212-aa98-9ba4990068a6/pixel.gif"></noscript> <script defer src="https://analytic.doanhtu.com/ingress/1a500c98-f488-4212-aa98-9ba4990068a6/script.js"></script>
-<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/katex.min.js"></script>
-<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/instantpage.js" type="module"></script>
-<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-
-<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/darkmode-js.min.js"></script>
-<script>
-  function addDarkmodeWidget() {
-      const options = {
-        bottom: 'unset', // default: '32px'
-        right: '32px', // default: '32px'
-        left: 'unset', // default: 'unset'
-        time: '0.3s', // default: '0.3s'
-        mixColor: '#fff', // default: '#fff'
-        backgroundColor: '#fff',  // default: '#fff'
-        buttonColorDark: '#100f2c',  // default: '#100f2c'
-        buttonColorLight: '#fff', // default: '#fff'
-        saveInCookies: true, // default: true,
-        label: '🌓', // default: ''
-        autoMatchOsTheme: true // default: true
+    <script
+      type="module"
+      src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/draw.js"
+    ></script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/darkmode-js.min.js"></script>
+    <script>
+      function addDarkmodeWidget() {
+        const options = {
+          bottom: "unset", // default: '32px'
+          right: "32px", // default: '32px'
+          left: "unset", // default: 'unset'
+          time: "0.3s", // default: '0.3s'
+          mixColor: "#fff", // default: '#fff'
+          backgroundColor: "#fff", // default: '#fff'
+          buttonColorDark: "#100f2c", // default: '#100f2c'
+          buttonColorLight: "#fff", // default: '#fff'
+          saveInCookies: true, // default: true,
+          label: "🌓", // default: ''
+          autoMatchOsTheme: true, // default: true
+        };
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
       }
-      const darkmode = new Darkmode(options);
-      darkmode.showWidget();
-  }
-  window.addEventListener('load', addDarkmodeWidget);
-</script>
-</body>
+      window.addEventListener("load", addDarkmodeWidget);
+    </script>
+  </body>
 </html>
