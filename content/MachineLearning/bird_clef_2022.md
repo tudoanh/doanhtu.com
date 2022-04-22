@@ -5,7 +5,7 @@ Authors: Do Anh Tu
 
 # Problem
 
-https://www.kaggle.com/competitions/birdclef-2022/overview
+[Kaggle url](https://www.kaggle.com/competitions/birdclef-2022/overview)
 
 > As the “extinction capital of the world,” Hawai'i has lost 68% of its bird species, the consequences of which can harm entire food chains. Researchers use population monitoring to understand how native birds react to changes in the environment and conservation efforts. But many of the remaining birds across the islands are isolated in difficult-to-access, high-elevation habitats. With physical monitoring difficult, scientists have turned to sound recordings. Known as bioacoustic monitoring, this approach could provide a passive, low labor, and cost-effective strategy for studying endangered bird populations.
 
