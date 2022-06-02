@@ -1,8 +1,5 @@
 .highlight .hll {
-  background-color: #ffffcc;
-}
-.highlight {
-  background: #ffffff;
+  background-color: #ffffff;
 }
 .highlight .c {
   color: #357c3c;
@@ -118,7 +115,7 @@
   color: #22863a;
 } /* Name.Tag */
 .highlight .nv {
-  color: #24292e;
+  color: #fffa4d;
 } /* Name.Variable */
 .highlight .ow {
   color: #ca82ff;
@@ -187,13 +184,13 @@
   color: #36ae7c;
 } /* Name.Function.Magic */
 .highlight .vc {
-  color: #24292e;
+  color: #fffa4d;
 } /* Name.Variable.Class */
 .highlight .vg {
-  color: #24292e;
+  color: #fffa4d;
 } /* Name.Variable.Global */
 .highlight .vi {
-  color: #24292e;
+  color: #fffa4d;
 } /* Name.Variable.Instance */
 .highlight .vm {
   color: #36ae7c;
