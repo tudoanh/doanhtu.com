@@ -23,12 +23,12 @@ Suppose we have an app named `main` and it's models look like this
 
    from django.db import models
 
-    class Parent(models.Model):
-        title = models.CharField(max_length=255)
+   class Parent(models.Model):
+      title = models.CharField(max_length=255)
 
-    class Child(models.Model):
-        parent = models.ForeignKey(Parent, on_delete=models.CASCADE, related_name="children")
-        content = models.TextField(null=True, blank=True)
+   class Child(models.Model):
+      parent = models.ForeignKey(Parent, on_delete=models.CASCADE, related_name="children")
+      content = models.TextField(null=True, blank=True)
 
 For example, we want to search *keyword* in childs content, and we want to do it quick! You can do like `this <https://stackoverflow.com/questions/40405003/django-postgres-full-text-search-in-reverse-related-models>`_, but that not quick enough for me. Maybe because I have too damn much data. But there are other way. First we need to add this line to `settings.py`
 
@@ -54,11 +54,11 @@ Finally we can create index
    from django.contrib.postgres.indexes import GinIndex
 
    class Child(models.Model):
-       content = models.TextField(null=True, blank=True)
-       search_vector = SearchVectorField(null=True, blank=True)
+      content = models.TextField(null=True, blank=True)
+      search_vector = SearchVectorField(null=True, blank=True)
 
-       class Meta:
-           indexes = [GinIndex(fields=['search_vector'])]
+      class Meta:
+         indexes = [GinIndex(fields=['search_vector'])]
 
 Now for the old data, we need to run this line to update their search vector, you may run this as a script or run it in `python manage.py shell`
 
@@ -90,7 +90,7 @@ Let's create a file `signals.py` inside `main` directory, and fill it with
 
    @receiver(post_save, sender=Child)
    def update_search_vector(sender, instance, **kwargs):
-       Child.objects.filter(id=instance.id).update(search_vector=SearchVector('content'))
+      Child.objects.filter(id=instance.id).update(search_vector=SearchVector('content'))
 
 You may ask "Why not just assign :code:`instance.search_vector=SearchVector('content')` then :code:`instance.save()`?". Good question, but we can not do that. You may try and got this error
 
@@ -103,7 +103,7 @@ Search and read the reasons. Last thing, we need to register the signal to our a
 .. code-block:: python
 
    def ready(self):
-       import main.signals
+      import main.signals
 
 Then `main/__init__.py`
 

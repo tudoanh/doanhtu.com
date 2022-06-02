@@ -8,3 +8,5 @@ Authors: Do Anh Tu
 [What is n-shot learning?](https://blog.floydhub.com/n-shot-learning/)
 
 [Meta AI State-of-the-art](https://paperswithcode.com/sota)
+
+[UvA Deep Learning Tutorial](https://uvadlc-notebooks.readthedocs.io/en/latest/index.html)

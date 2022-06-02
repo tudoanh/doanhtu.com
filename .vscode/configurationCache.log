@@ -1,0 +1,1 @@
+{"buildTargets":["cf_upload","clean","devserver","dropbox_upload","ftp_upload","github","help","html","publish","regenerate","rsync_upload","s3_upload","serve","serve-global","ssh_upload","stopserver"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

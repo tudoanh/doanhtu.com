@@ -1,0 +1,527 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu Jun  2 18:42:21 2022
+
+# Variables
+
+# 'override' directive
+GNUMAKEFLAGS := 
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = i3
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# makefile (from 'Makefile', line 35)
+RELATIVE = 0
+# environment
+NVM_INC = /home/james/.nvm/versions/node/v14.17.6/include/node
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# environment
+GDMSESSION = i3
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /home/james/Projects/doanhtu.com
+# makefile
+SHELL = /bin/sh
+# makefile (from 'Makefile', line 22)
+CLOUDFILES_USERNAME = my_rackspace_username
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# makefile (from 'Makefile', line 1)
+PY = python3
+# environment
+_ = /usr/share/code/code
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-i3:/etc/xdg
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# automatic
+@F = $(notdir $@)
+# makefile (from 'Makefile', line 23)
+CLOUDFILES_API_KEY = my_rackspace_api_key
+# makefile (from 'Makefile', line 15)
+SSH_HOST = localhost
+# makefile (from 'Makefile', line 30)
+DEBUG = 0
+# environment
+USERNAME = james
+# environment
+MAKELEVEL := 0
+# environment
+MANDATORY_PATH = /usr/share/gconf/i3.mandatory.path
+# environment
+XDG_DATA_DIRS = /usr/share/i3:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# environment
+LESS_TERMCAP_se = [0m
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+CLUTTER_IM_MODULE = ibus
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-77f19fb1-0990-47dd-a610-b3b633e6c028.sock
+# environment
+LC_NAME = vi_VN
+# environment
+VSCODE_CWD = /home/james
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/james/.fly/bin:/usr/local/cuda-11.2/bin:/home/james/.nvm/versions/node/v14.17.6/bin:/home/james/.pyenv/plugins/pyenv-virtualenv/shims:/home/james/.pyenv/shims:/home/james/.pyenv/bin:/home/james/.pyenv/versions:/home/james/.cargo/bin:/home/james/.local/share/solana/install/active_release/bin:/home/james/.local/bin:/home/james/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/james/.fzf/bin:/usr/local/go/bin:/home/james/golang/bin:/home/james/bin:/home/james/.cargo/bin:/home/james/.local/bin:/home/james/.local/share/solana/install/active_release/bin
+# makefile (from 'Makefile', line 20)
+S3_BUCKET = doanhtu.com
+# makefile (from 'Makefile', line 26)
+DROPBOX_DIR = ~/Dropbox/Public/
+# environment
+LESS_TERMCAP_mb = [1;32m
+# makefile (from 'Makefile', line 3)
+PELICANOPTS = 
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# makefile (from 'Makefile', line 2)
+PELICAN = pelican
+# environment
+FLYCTL_INSTALL = /home/james/.fly
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GOPATH = /home/james/golang
+# environment
+NVM_BIN = /home/james/.nvm/versions/node/v14.17.6/bin
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+PYENV_ROOT = /home/james/.pyenv
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+LS_COLORS = 
+# makefile (from 'Makefile', line 24)
+CLOUDFILES_CONTAINER = my_cloudfiles_container
+# environment
+XDG_SESSION_DESKTOP = i3
+# environment
+SSH_AUTH_SOCK = /tmp/ssh-cGUqzGOAAXde/agent.3192
+# automatic
+%F = $(notdir $%)
+# makefile (from 'Makefile', line 7)
+OUTPUTDIR = $(BASEDIR)/public
+# environment
+DISPLAY = :1
+# environment
+LESS_TERMCAP_me = [0m
+# environment
+GKSwstype = 100
+# environment
+GTK_IM_MODULE = ibus
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /home/james/Projects/doanhtu.com
+# default
+.LOADED := 
+# environment
+XDG_SEAT = seat0
+# environment
+SSH_AGENT_PID = 3245
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = i3
+# environment
+LESS_TERMCAP_ue = [0m
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+PYENV_SHELL = zsh
+# environment
+HOME = /home/james
+# makefile (from 'Makefile', line 13)
+FTP_TARGET_DIR = /
+# environment
+LD_LIBRARY_PATH = /home/james/.local/cuda/lib64:/usr/local/cuda-11.2/include:/usr/local/cuda-11.2/lib64:
+# environment
+VSCODE_CODE_CACHE_PATH = /home/james/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+# environment
+LOGNAME = james
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+NVM_CD_FLAGS = -q
+# automatic
++F = $(notdir $+)
+# environment
+ZSH = /home/james/.oh-my-zsh
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+MAKE_VERSION := 4.2.1
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+LESS_TERMCAP_md = [1;32m
+# environment
+XDG_VTNR = 2
+# environment
+LC_TIME = vi_VN
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = ibus
+# makefile (from 'Makefile', line 28)
+GITHUB_PAGES_BRANCH = gh-pages
+# environment
+SHLVL = 0
+# makefile (from 'Makefile', line 6)
+INPUTDIR = $(BASEDIR)/content
+# environment
+LESS_TERMCAP_so = [01;33m
+# environment
+XDG_SESSION_ID = 2
+# environment
+USER = james
+# environment
+LC_MONETARY = vi_VN
+# makefile
+.DEFAULT_GOAL := help
+# environment
+XDG_CURRENT_DESKTOP = i3
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# makefile (from 'Makefile', line 16)
+SSH_PORT = 22
+# environment
+LC_TELEPHONE = vi_VN
+# makefile (from 'Makefile', line 9)
+PUBLISHCONF = $(BASEDIR)/publishconf.py
+# environment
+I3SOCK = /run/user/1000/i3/ipc-socket.3192
+# default
+MAKE_COMMAND := make
+# makefile (from 'Makefile', line 5)
+BASEDIR = $(CURDIR)
+# environment
+OLDPWD = /home/james
+# default
+.VARIABLES := 
+# makefile (from 'Makefile', line 8)
+CONFFILE = $(BASEDIR)/pelicanconf.py
+# automatic
+*F = $(notdir $*)
+# makefile (from 'Makefile', line 18)
+SSH_TARGET_DIR = /var/www
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-a484779e-1.67.2-main.sock
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+NVM_DIR = /home/james/.nvm
+# environment
+LESS_TERMCAP_us = [1;4;31m
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# makefile (from 'Makefile', line 12)
+FTP_USER = anonymous
+# environment
+LC_PAPER = vi_VN
+# environment
+NO_AT_BRIDGE = 1
+# environment
+QT_ACCESSIBILITY = 1
+# environment
+DEFAULTS_PATH = /usr/share/gconf/i3.default.path
+# default
+MAKEFILES := 
+# environment
+LC_NUMERIC = vi_VN
+# automatic
+<F = $(notdir $<)
+# environment
+LC_MEASUREMENT = vi_VN
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# environment
+QT4_IM_MODULE = ibus
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+WINDOWPATH = 2
+# makefile (from 'Makefile', line 11)
+FTP_HOST = localhost
+# environment
+PYENV_VIRTUALENV_INIT = 1
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+ 
+make: *** No rule to make target 'all'.  Stop.
+
+# environment
+LC_IDENTIFICATION = vi_VN
+# default
+.RECIPEPREFIX := 
+# environment
+LC_ADDRESS = vi_VN
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# makefile (from 'Makefile', line 17)
+SSH_USER = root
+# environment
+VSCODE_PID = 3008249
+# environment
+python = python3
+# variable set hash-table stats:
+# Load=150/1024=15%, Rehash=0, Collisions=23/184=12%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 66306, inode 23468527): 19 files, no impossibilities.
+
+# 19 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+stopserver:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 96):
+	$(BASEDIR)/develop_server.sh stop
+	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
+
+cf_upload: publish
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 118):
+	cd $(OUTPUTDIR) && swift -v -A https://auth.api.rackspacecloud.com/v1.0 -U $(CLOUDFILES_USERNAME) -K $(CLOUDFILES_API_KEY) upload -c $(CLOUDFILES_CONTAINER) .
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+.PHONY: html help clean regenerate serve serve-global devserver stopserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+serve-global:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	cd $(OUTPUTDIR) && $(PY) -m pelican.server 80 0.0.0.0
+
+rsync_upload: publish
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 106):
+	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) --cvs-exclude
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-01-05 15:37:50.65976784
+#  File has been updated.
+#  Successfully updated.
+
+help:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 41):
+	@echo 'Makefile for a pelican Web site                                           '
+	@echo '                                                                          '
+	@echo 'Usage:                                                                    '
+	@echo '   make html                           (re)generate the web site          '
+	@echo '   make clean                          remove the generated files         '
+	@echo '   make regenerate                     regenerate files upon modification '
+	@echo '   make publish                        generate using production settings '
+	@echo '   make serve [PORT=8000]              serve site at http://localhost:8000'
+	@echo '   make serve-global [SERVER=0.0.0.0]  serve (as root) to $(SERVER):80    '
+	@echo '   make devserver [PORT=8000]          start/restart develop_server.sh    '
+	@echo '   make stopserver                     stop local server                  '
+	@echo '   make ssh_upload                     upload the web site via SSH        '
+	@echo '   make rsync_upload                   upload the web site via rsync+ssh  '
+	@echo '   make dropbox_upload                 upload the web site via Dropbox    '
+	@echo '   make ftp_upload                     upload the web site via FTP        '
+	@echo '   make s3_upload                      upload the web site via S3         '
+	@echo '   make cf_upload                      upload the web site via Cloud Files'
+	@echo '   make github                         upload the web site via gh-pages   '
+	@echo '                                                                          '
+	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
+	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
+	@echo '                                                                          '
+
+ssh_upload: publish
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 103):
+	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+dropbox_upload: publish
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 109):
+	cp -r $(OUTPUTDIR)/* $(DROPBOX_DIR)
+
+ftp_upload: publish
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 112):
+	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
+
+publish:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 100):
+	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+
+devserver:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 92):
+	$(BASEDIR)/develop_server.sh restart
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 68):
+	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
+
+regenerate:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 71):
+	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+
+html:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 65):
+	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+
+s3_upload: publish
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 115):
+	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed --guess-mime-type --no-mime-magic --no-preserve --region=ap-southeast-1
+
+serve:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 77):
+	cd $(OUTPUTDIR) && $(PY) -m pelican.server
+
+github: publish
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 121):
+	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
+	git push origin $(GITHUB_PAGES_BRANCH)
+
+# files hash-table stats:
+# Load=21/1024=2%, Rehash=0, Collisions=0/54=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 41 / storage = 397 B / avg = 9 B
+# current buf: size = 8162 B / used = 397 B / count = 41 / avg = 9 B
+
+# strcache performance: lookups = 85 / hit rate = 51%
+# hash-table stats:
+# Load=41/8192=1%, Rehash=0, Collisions=1/85=1%
+# Finished Make data base on Thu Jun  2 18:42:21 2022
+
+ 
