@@ -1,47 +1,49 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block title %} {{ article.title }} {% endblock %}
+{% block head %} {{ super() }} {% if article.description %}
+<meta name="description" content="{{ article.description }}" />
+{% endif %} {% for tag in article.tags %}
+<meta name="tags" content="{{ tag }}" />
+{% endfor %} {% endblock %} {% block content %}
+<section>
+  <header>
+    <h1>
+      <a
+        href="{{ SITEURL }}/{{ article.url }}"
+        rel="bookmark"
+        title="Permalink to {{ article.title|striptags }}"
+        >{{ article.title }}</a
+      >
+    </h1>
+  </header>
+  <footer>
+    <time datetime="{{ article.date.isoformat() }}">
+      {{ article.date|strftime('%d/%m/%Y') }}
+    </time>
+    <address>
+      By {% for author in article.authors %}
+      <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+      {% endfor %} in
+      <a href="{{ SITEURL }}/{{ article.category.url }}"
+        >{{ article.category }}</a
+      >
+    </address>
+    {% if article.tags %}
+    <em>Tags</em>: {% for tag in article.tags %}
+    <a href="{{ SITEURL }}/{{ tag.url }}"><em>{{ tag }}</em></a
+    >{% if not loop.last %},{% endif %} {% endfor %} {% endif %}
+  </footer>
+  <br />
+  <div>{{ article.content }}</div>
+  <!-- /.entry-content -->
 
-{% block title %}
-  {{ article.title }}
-{% endblock %}
+  <script
+    data-isso="https://isso.doanhtu.com/"
+    src="https://isso.doanhtu.com/js/embed.min.js"
+  ></script>
 
-{% block head %}
-  {{ super() }}
-  {% if article.description %}
-    <meta name="description" content="{{ article.description }}"/>
-  {% endif %}
-
-  {% for tag in article.tags %}
-    <meta name="tags" content="{{ tag }}"/>
-  {% endfor %}
-
-{% endblock %}
-
-{% block content %}
-  <section>
-    <header>
-      <h1>
-        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-           title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
-    </header>
-    <footer>
-      <time datetime="{{ article.date.isoformat() }}"> {{ article.date|strftime('%d/%m/%Y') }} </time>
-      <address>By
-        {% for author in article.authors %}
-          <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-        {% endfor %} in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
-      </address>
-      {% if article.tags %}
-        <em>Tags</em>:
-        {% for tag in article.tags %}
-          <a href="{{ SITEURL }}/{{ tag.url }}"><em>{{ tag }}</em></a>{% if not loop.last %},{% endif %}
-        {% endfor %}
-      {% endif %}
-    </footer>
-    <br>
-    <div>
-      {{ article.content }}
-    </div><!-- /.entry-content -->
+  <section id="isso-thread">
+    <noscript>Javascript needs to be activated to view comments.</noscript>
   </section>
-  <section>
-  </section>
+</section>
+<section></section>
 {% endblock %}
