@@ -5,9 +5,7 @@ Authos: Do Anh Tu
 
 If you are a Python dev, I will share with you this trick to avoid future Python related problems.
 
-After install a new, fresh OS, you should install those dependencies
-
-https://github.com/pyenv/pyenv/wiki#suggested-build-environment
+After install a new, fresh OS, you should install those [dependencies](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
 
 Example, after installed a new Ubuntu for my PC, I will run this command
 

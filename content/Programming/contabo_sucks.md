@@ -1,13 +1,15 @@
-Title: Contabo server is suck!
+Title: Contabo server review
 Date: 06/21/22 23:03
 Tags: contabo, server, review
 Authors: Do Anh Tu
 
 ### A review
 
-After a month trying Contabo, I must say that don't use their servers.
+After a month trying Contabo, I must say that:
 
-Their storage bandwith policy is good, I will keep continue using it, but no way I'm go back to their servers.
+<span class="red-underline">Don't use their servers</span>.
+
+Their storage bandwith policy is good, I will keep continue using it. But no way I'm go back for their server.
 
 It's always down!
 
@@ -19,7 +21,7 @@ Their supporter is nice, but did not help.
 
 I'm going to use HostHatch for an experiment.
 
-They have a lot of location in Asia, like Hongkong, Singapore and Japan (with cheap price).
+They have a lot of locations in Asia, like Hongkong, Singapore and Japan (with cheap price).
 
 <img src="{static}/static/images/hosthatch.png" />
 

@@ -14,6 +14,12 @@ const annotations = {
     multiline: true,
     animate: true,
   },
+  ".red-underline": {
+    type: "underline",
+    color: "#F32424",
+    multiline: true,
+    animate: true,
+  },
   ".circle": {
     type: "circle",
     color: "#ffce55",
