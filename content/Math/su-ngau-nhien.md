@@ -43,7 +43,7 @@ X = \text{sáng ngày 27/6/2022 có mưa từ 9 đến 12 giờ} \\
 Y = \text{quay xúc sắc ra được mặt 6} \\
 $$
 
-Với mỗi biến trên, thay vì có kết quả là số, ta sẽ có kết quả là một <span class="red-underline">xác suất</span> sự việc đấy xảy ra, có thể từ 0 (không thể xảy ra) đến 1 (chắc chắn xảy ra)
+Với mỗi biến trên, thay vì có kết quả là số, ta sẽ có kết quả là một _xác suất_ sự việc đấy xảy ra, có thể từ 0 (không thể xảy ra) đến 1 (chắc chắn xảy ra)
 
 Với xác suất cổ điển, khi coi mọi thứ có khả năng xảy ra là như nhau, thì việc tính toán khá dễ dàng nhưng không thực tế.
 
@@ -98,12 +98,12 @@ Còn xác suất thì sao?
 
 # Bayes Modeling và Model Inference
 
-Xác suất khác với toán ở chỗ, nó ko có một con số cụ thể cho bạn, mà chỉ cho bạn biết được một thứ gọi là <a class="red-underline" href="https://vi.m.wikipedia.org/wiki/Ph%C3%A2n_ph%E1%BB%91i_x%C3%A1c_su%E1%BA%A5t">phân phối</a> ([distribution](<https://en.m.wikipedia.org/wiki/Distribution_(mathematics)>)). Dùng _phân phối_ này bạn có thể tìm ra được quy luật giữa các dữ liệu đầu vào.
+Xác suất khác với toán ở chỗ, nó ko có một con số cụ thể cho bạn, mà chỉ cho bạn biết được một thứ gọi là <a href="https://vi.m.wikipedia.org/wiki/Ph%C3%A2n_ph%E1%BB%91i_x%C3%A1c_su%E1%BA%A5t">phân phối</a> ([distribution](<https://en.m.wikipedia.org/wiki/Distribution_(mathematics)>)). Dùng _phân phối_ này bạn có thể tìm ra được quy luật giữa các dữ liệu đầu vào.
 
 <img src="{static}/static/images/linear-example.png" />
 <img src="{static}/static/images/distribution.png" />
 
-Ví dụ như, hút thuốc lá có tăng tỷ lệ ung thư không? Bạn đi tìm <span class="circle">ngẫu nhiên</span> 100 người trên 18 tuổi, rồi tạo 1 bảng gồm 2 cột, 1 cột là có hút thuốc trên 1 năm hay ko, cột còn lại là có ung thư hay không. Sau khi tạo model và có kết quả, ta có thể xem được có mối tương quan hay không và có thể đưa ra hành động phù hợp.
+Ví dụ như, hút thuốc lá có tăng tỷ lệ ung thư không? Bạn đi tìm **ngẫu nhiên** 100 người trên 18 tuổi, rồi tạo 1 bảng gồm 2 cột, 1 cột là có hút thuốc trên 1 năm hay ko, cột còn lại là có ung thư hay không. Sau khi tạo model và có kết quả, ta có thể xem được có mối tương quan hay không và có thể đưa ra hành động phù hợp.
 
 Đây là bước khởi đầu cho khoa học đích thực, sự hỗn loạn được công thức hóa, và con người có thể kiểm chứng nhiều giả thuyết của mình chính xác hơn.
 

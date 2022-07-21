@@ -30,13 +30,16 @@ And my jobs now are:
 3. Find the right directory where Docker bind volumes with `docker inspect <container_name> | grep "Source"`
    <img src="{static}/static/images/inspect_docker.png" style="padding-top: 10px;" />
 
-4. `tar cvf` everything inside `.../_data`
-5. `rsync` tar files to new server
-6. `tar xvf` them to new `~/backup` directory
-7. Build and up docker services
-8. Stop services
-9. `rsync` backup directory to binded directory path from `step 3`
-10. Repeat step 7
+If you want to archive database
+
+> 1. `tar cvf` everything inside `.../_data`
+> 2. `rsync` tar files to new server
+> 3. `tar xvf` them to new `~/backup` directory
+
+4. Build and up docker services
+5. Stop services
+6. `rsync` backup directory to binded directory path from `step 3`
+7. Repeat step 4 for other services
 
 After that you can safely delete the extracted directories. Install `nginx` and copy config files from A -> B.
 
