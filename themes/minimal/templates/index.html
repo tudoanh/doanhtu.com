@@ -1,7 +1,5 @@
-{% extends "base.html" %}
-{% block title %} Home {% endblock title %}
-
-{% block content %}
+{% extends "base.html" %} {% block title %} Home {% endblock title %} {% block
+content %}
 <hr />
 <section>{% block content_title %} {% endblock %}</section>
 
@@ -12,11 +10,6 @@
       <h1>
         <a
           href="{{ SITEURL }}/{{ article.url }}"
-          hx-get="{{ SITEURL }}/{{ article.url }}"
-          x-trigger="click"
-          hx-target="#body"
-          hx-swap="innerHTML"
-          hx-push-url="true"
           rel="bookmark"
           title="Permalink to {{ article.title|striptags }}"
           >{{ article.title }}</a
@@ -31,24 +24,12 @@
       <address>
         In
         <a href="{{ SITEURL }}/{{ article.category.url }}"
-          hx-get="{{ SITEURL }}/{{ article.category.url }}"
-          x-trigger="click"
-          hx-target="#body"
-          hx-swap="innerHTML"
-          hx-push-url="true"
           >{{ article.category }}</a
         >
       </address>
       {% if article.tags %}
       <em>Tags</em>: {% for tag in article.tags %}
-      <a
-        href="{{ SITEURL }}/{{ tag.url }}"
-        hx-get="{{ SITEURL }}/{{ tag.url }}"
-        x-trigger="click"
-        hx-target="#body"
-        hx-swap="innerHTML"
-        hx-push-url="true"
-        ><em>{{ tag }}</em></a
+      <a href="{{ SITEURL }}/{{ tag.url }}"><em>{{ tag }}</em></a
       >{% if not loop.last %},{% endif %} {% endfor %} {% endif %}
     </footer>
 
@@ -60,21 +41,13 @@
         class="readmore"
         style="text-decoration: none"
         href="{{ SITEURL }}/{{ article.url }}"
-        hx-get="{{ SITEURL }}/{{ article.url }}"
-        x-trigger="click"
-        hx-target="#body"
-        hx-swap="innerHTML"
-        hx-push-url="true"
         >Read more</a
       >
     </div>
   </article>
   <hr />
-  {% endfor %}
-
-  {% if articles_page.has_other_pages() %}
-  {% include'pagination.html' %}
-  {% endif %}
+  {% endfor %} {% if articles_page.has_other_pages() %} {% include
+  'pagination.html' %} {% endif %}
 </section>
 <!-- /#content -->
 {% endblock content %}
