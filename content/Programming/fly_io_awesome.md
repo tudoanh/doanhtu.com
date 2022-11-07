@@ -104,6 +104,8 @@ You can use the Web UI of Vaultwarden to export/import data as JSON format.
 
         Source                    = fly
 
+    Kudos to this [awesome article](https://til.simonwillison.net/fly/custom-subdomain-fly)
+
 ## Tricks and tips
 
 **Copy file to app server**
