@@ -102,24 +102,48 @@
     {% endif %} {% endblock head %}
   </head>
 
-  <body>
+  <body id="body">
     <main class="yue">
       <section style="text-align: center">
         <header>
-          <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+          <h1>
+            <a
+              href="{{ SITEURL }}/"
+              hx-get="{{ SITEURL }}"
+              x-trigger="click"
+              hx-target="#body"
+              hx-swap="innerHTML"
+              hx-push-url="true"
+              >{{ SITENAME }}</a
+            >
+          </h1>
         </header>
 
         <div>
-          {# {% for cat, null in categories %}
-          <span
-            ><a href="{{ SITEURL }}/{{ cat.url }}"
-              ><strong>/{{ cat }}</strong></a
-            ></span
-          >
-          {% endfor %} #} {% for p in pages %}
-          <div><a href="{{ SITEURL }}/pages/{{ p.url }}">{{ p.title }}</a></div>
+          {% for p in pages %}
+          <div>
+            <a
+              href="{{ SITEURL }}/pages/{{ p.url }}"
+              hx-get="{{ SITEURL }}/pages/{{ p.url }}"
+              x-trigger="click"
+              hx-target="#body"
+              hx-swap="innerHTML"
+              hx-push-url="true"
+              >{{ p.title }}</a
+            >
+          </div>
           {% endfor %}
-          <div><a href="/archives">Archives</a></div>
+          <div>
+            <a
+              href="/archives"
+              hx-get="{{ SITEURL }}/archives"
+              x-trigger="click"
+              hx-target="#body"
+              hx-swap="innerHTML"
+              hx-push-url="true"
+              >Archives</a
+            >
+          </div>
           <div><a href="/atom">Feed</a></div>
         </div>
       </section>
@@ -137,6 +161,7 @@
       src="https://analytic.doanhtu.com/ingress/1a500c98-f488-4212-aa98-9ba4990068a6/script.js"
     ></script>
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/katex.min.js"></script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/htmx.min.js"></script>
     <script
       src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/instantpage.js"
       type="module"

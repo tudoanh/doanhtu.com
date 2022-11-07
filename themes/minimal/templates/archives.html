@@ -15,8 +15,20 @@
       {% for article in dates %}
         <tr>
           <td>{{ article.date|strftime('%d/%m/%Y') }}</td>
-          <td><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
-          <td><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></td>
+          <td><a href="{{ SITEURL }}/{{ article.url }}"
+              hx-get="{{ SITEURL }}/{{ article.url }}"
+              x-trigger="click"
+              hx-target="#body"
+              hx-swap="innerHTML"
+              hx-push-url="true"
+              >{{ article.title }}</a></td>
+          <td><a href="{{ SITEURL }}/{{ article.category.url }}"
+              hx-get="{{ SITEURL }}/{{ article.category.url }}"
+              x-trigger="click"
+              hx-target="#body"
+              hx-swap="innerHTML"
+              hx-push-url="true"
+              >{{ article.category }}</a></td>
         </tr>
       {% endfor %}
       </tbody>
