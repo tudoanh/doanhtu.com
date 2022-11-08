@@ -1,9 +1,17 @@
-{% extends "base.html" %} {% block title %} {{ article.title }} {% endblock %}
-{% block head %} {{ super() }} {% if article.description %}
-<meta name="description" content="{{ article.description }}" />
-{% endif %} {% for tag in article.tags %}
-<meta name="tags" content="{{ tag }}" />
-{% endfor %} {% endblock %} {% block content %}
+{% extends "base.html" %} 
+{% block title %} {{ article.title }} {% endblock %}
+
+{% block head %} 
+{{ super() }} 
+  {% if article.description %}
+  <meta name="description" content="{{ article.description }}" />
+  {% endif %} 
+  {% for tag in article.tags %}
+    <meta name="tags" content="{{ tag }}" />
+  {% endfor %} 
+{% endblock %} 
+
+{% block content %}
 <section>
   <header>
     <h1>
@@ -28,13 +36,22 @@
       >
     </address>
     {% if article.tags %}
-    <em>Tags</em>: {% for tag in article.tags %}
-    <a href="{{ SITEURL }}/{{ tag.url }}"><em>{{ tag }}</em></a
-    >{% if not loop.last %},{% endif %} {% endfor %} {% endif %}
+      <em>Tags</em>: {% for tag in article.tags %}
+      <a href="{{ SITEURL }}/{{ tag.url }}"><em>{{ tag }}</em></a
+      >{% if not loop.last %},
+      {% endif %} 
+      {% endfor %} 
+    {% endif %}
   </footer>
   <br />
+  <figure>
+    <img src="https://qrapi.xyz/v1/png/?msg={{ SITEURL }}/{{ article.url }}&version=2&size=4" alt="Link as QR code of article {{article.title}}" height="132" width="132"/>
+  </figure>
   <div>{{ article.content }}</div>
   <!-- /.entry-content -->
+  <figure>
+    <img src="https://qrapi.xyz/v1/png/?msg={{ SITEURL }}/{{ article.url }}&version=2&size=4" alt="Link as QR code of article {{article.title}}" height="132" width="132"/>
+  </figure>
 
   <script
     data-isso="https://isso.doanhtu.com/"

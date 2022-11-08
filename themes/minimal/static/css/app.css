@@ -14,7 +14,7 @@
 }
 
 .windows .yue {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .yue ::-moz-selection {
@@ -36,7 +36,7 @@
   color: #222223;
 }
 .yue h1 {
-  font-size: 1.8em;
+  font-size: 1.6em;
   margin: 0.67em 0;
 }
 .yue > h1 {
@@ -257,9 +257,15 @@
 
 @media (max-width: 812px) {
   .yue p {
-    font-size: 17px;
+    font-size: 16px;
   }
   .yue video {
     width: 400px;
+  }
+  .yue pre {
+    font-size: 13px;
+  }
+  .yue code {
+    font-size: 13px;
   }
 }
