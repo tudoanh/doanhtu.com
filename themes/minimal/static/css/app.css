@@ -258,6 +258,7 @@
 @media (max-width: 812px) {
   .yue p {
     font-size: 16px;
+    line-height: 1.6;
   }
   .yue video {
     width: 400px;
