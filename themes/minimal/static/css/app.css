@@ -95,6 +95,7 @@
   margin: 0 auto;
   max-width: 100%;
   height: auto;
+  image-rendering: pixelated;
 }
 .yue a img {
   /* Remove border on IE */
@@ -113,6 +114,7 @@
   max-width: 100%;
   margin: auto auto 4px;
   box-sizing: border-box;
+  image-rendering: pixelated;
 }
 .yue figure figcaption {
   position: relative;
