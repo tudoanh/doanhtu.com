@@ -5,7 +5,7 @@ Authors: Do Anh Tu
 
 ## What is Playwright?
 
-Demo: https://pywright.fly.dev
+Demo: [pywright.fly.dev](https://pywright.fly.dev)
 
 Playwright is a browser automation library from Microsoft. It can be used to automate tasks in the browser, for testing purpose.
 
