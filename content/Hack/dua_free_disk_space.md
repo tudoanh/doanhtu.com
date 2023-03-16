@@ -8,7 +8,7 @@ This evening I want to freeup my diskspace, since 50 GB left (1/10 of my diskspa
 
 Before that I've tried with `du` and `sort` but it's so slow and hard to use. 
 
-Then I found `dua` (Disk Usage Analyzer) tool and it's is a god send. So good.
+Then I found `dua` (Disk Usage Analyzer) tool and it is a god send. So good.
 
 To install, just run this command:
 

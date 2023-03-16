@@ -3,9 +3,10 @@ Date: 11/19/22 22:36
 Tags: playwright, python, scraping, tutorial, pywright  
 Authors: Do Anh Tu
 
+Demo: [pywright.fly.dev](https://pywright.fly.dev)
+
 ## What is Playwright?
 
-Demo: https://pywright.fly.dev
 
 Playwright is a browser automation library from Microsoft. It can be used to automate tasks in the browser, for testing purpose.
 
