@@ -12,7 +12,7 @@ SUMMARY_MAX_LENGTH = 150
 
 HOME_HIDE_TAGS = False
 OUTPUT_PATH = "public/"
-STATIC_PATHS = ["static/css", "static/images", "static/js", "static/css/fonts"]
+STATIC_PATHS = ["static/css", "static/images", "static/js", "static/css/fonts", ".well-known"]
 RELATIVE_URLS = True
 MARKDOWN = {
     "extensions": ["fenced_code"],
@@ -75,3 +75,8 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+
+EXTRA_PATH_METADATA = {
+    ".well-known/matrix/server": {"path": ".well-known/matrix/server"},
+    ".well-known/matrix/client": {"path": ".well-known/matrix/client"},
+}
